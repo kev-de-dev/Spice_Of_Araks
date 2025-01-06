@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contactez l'équipe $Spice Of Araks pour toute question ou collaboration.">
+  <meta name="author" content="Spice Of Araks Team">
+  <title>Contact</title>
+  <link rel="stylesheet" href="/styles-secondary.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Nous <strong>Contacter</strong></h1>
+      <p>Une question, une suggestion ou un partenariat ? Nous sommes à votre écoute.</p>
+      <a href="index.html" class="secondary-button">Retour à l'accueil</a>
+    </div>
+  </header>
+
+  <section id="contact" class="contact-section">
+    <h2>Formulaire de Contact</h2>
+    <p>Rejoignez l'une des Grandes Maisons et contribuez à façonner l'avenir dans les dunes d'Araks.</p>
+    <form action="https://formspree.io/f/xbllpdyn" method="post" onsubmit="return redirectToConfirmation();" class="contact-form">
+        
+      <label for="name">Nom</label>
+      <input type="text" id="name" name="name" placeholder="Votre nom" required>
+  
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Votre email" required>
+  
+      <label for="house">À quelle Maison souhaitez-vous prêter allégeance ?</label>
+      <select id="house" name="house" required>
+        <option value="" disabled selected>Choisissez votre Maison</option>
+        <option value="Atraleades">Maison Atraleades - Investisseurs stratégiques prêts à façonner l'avenir.</option>
+        <option value="Harkonnen">Maison Harkonnen - Innovateurs technologiques spécialisés dans les DApps et le Play-to-Earn.</option>
+        <option value="Core-in-0">Maison Core-in-0 - Experts en partenariats commerciaux et marketing stratégique.</option>
+        <option value="Ix">Maison Ix - Gestion de communauté et engagement interactif.</option>
+      </select>
+  
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Expliquez votre vision ou demande..." required></textarea>
+  
+      <button type="submit" class="cta-button">Envoyer</button>
+    </form>
+  </section>
+  
+  <script>
+    function redirectToConfirmation() {
+      alert('Merci pour votre message ! Nous vous répondrons rapidement.');
+      return true; // Permet l'envoi du formulaire
+    }
+  </script>
+  
+  
+
+  <footer>
+    <p>&copy; 2025 $Spice Of Araks. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>

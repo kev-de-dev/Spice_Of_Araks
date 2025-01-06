@@ -1,0 +1,440 @@
+/* Import Fonts */
+@font-face {
+  font-family: 'Dune Rise';
+  src: url('/font/Dune_Rise.ttf') format('truetype'),
+       url('/fonts/DuneRise-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Root Variables */
+:root {
+  --primary-color: #e6a157; /* Doré épicé */
+  --secondary-color: #c19a6b; /* Sableux */
+  --accent-color: #2a1045; /* Violet futuriste avec opacité réduite */
+  --background-color: #1c1c1c; /* Noir profond */
+  --font-title: 'Dune Rise', serif; /* Police pour les titres */
+
+  --hover-shadow: rgba(230, 161, 87, 0.5); /* Ombre dorée */
+  --gradient-dunes: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif; /* Police par défaut */
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+em {
+  color: rgb(49, 22, 66);
+}
+
+/* Headers and Titles */
+h1, h2, h3, h4 {
+  font-family: var(--font-title);
+  color: var(--primary-color);
+ 
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+h3 strong {
+  color: var(--accent-color);
+}
+/* Buttons */
+.cta-button, .community-button {
+  background: var(--gradient-dunes);
+  border: none;
+  color: rgb(60, 7, 108);
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 5px;
+}
+.cta-button:hover, .community-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 4px 15px var(--hover-shadow);
+}
+.hero-buttons {
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 25px;
+}
+
+.secondary-button {
+  background: var(--secondary-color);
+  color: var(--background-color);
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.secondary-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 15px var(--hover-shadow);
+  background: var(--primary-color);
+}
+
+
+/* Hero Section */
+.hero {
+  background: url('dunes-animation.gif') no-repeat center center / cover;
+  height: 100vh;
+  margin-bottom: 80px;
+  align-items: center;
+  text-align: center;
+  color: var(--primary-color);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.026);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 80px;
+  color: var(--accent-color);
+}
+.hero h1,h4{
+  font-size: 3.5rem;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+
+ p {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  max-width: 600px;
+  line-height: 1.8;
+}
+
+.hero .cta-button {
+  margin: 80px;
+}
+
+/* About Section */
+.about-section {
+  background: var(--background-color);
+  color: var(--secondary-color);
+  padding: 50px 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about-content {
+  display: flex;
+flex-direction: column;
+  gap: 20px;
+}
+
+.about-text {
+display: flex;
+flex-direction: column;
+  animation: slideIn 1s ease;
+}
+
+.about-video video {
+  max-width: 100%;
+  border-radius: 10px;
+  border: 2px solid var(--accent-color);
+  animation: slideIn 1s ease;
+}
+
+/* Storyline Section */
+.storyline-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 60px 10%;
+  background: var(--gradient-dunes);
+  color: var(--background-color);
+  text-align: center;
+}
+
+.storyline-content p {
+  margin: 15px 0;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.storyline-highlight {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Tokenomics Section */
+.tokenomics-section {
+  background: var(--background-color);
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.tokenomics-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tokenomics-details div {
+  flex: 1 1 300px;
+
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tokenomics-details div:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 20px var(--hover-shadow);
+}
+
+.tokenomics-details p {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+/* Roadmap Section */
+.roadmap-section {
+  background: var(--accent-color);
+  color: var(--secondary-color);
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.timeline-item {
+  background: var(--background-color);
+  color: var(--primary-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  text-align: left;
+}
+
+/* Partners Section */
+
+.partners-section {
+  background: var(--background-color);
+  color: var(--primary-color);
+  padding: 60px 5%;
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px;
+}
+
+/* Partner Card */
+.partner-card {
+  flex: 0 0 auto;
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  padding: 20px;
+  border-radius: 15px;
+  min-width: 240px;
+  max-width: 300px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+.partner-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0%, transparent 80%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.partner-card:hover::before {
+  opacity: 1;
+}
+
+.partner-card:hover {
+  transform: translateY(-10px) scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+}
+
+.partner-card h3 {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  z-index: 1;
+  position: relative;
+  transition: text-shadow 0.4s ease;
+}
+
+.partner-card:hover h3 {
+  text-shadow: 0px 3px 10px rgba(255, 255, 255, 0.8);
+}
+
+.partner-card p {
+  margin: 10px 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--background-color);
+  z-index: 1;
+  position: relative;
+}
+
+.partner-card::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+  z-index: 0;
+}
+
+.partner-card:hover::after {
+  width: 140%;
+  height: 140%;
+}
+
+
+/* Community Section */
+.community-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--gradient-dunes);
+  color: rgb(60, 7, 108);
+  padding: 60px 10%;
+  text-align: center;
+}
+
+.community-button {
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--background-color);
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .tokenomics-details {
+    flex-direction: column;
+  }
+
+  .timeline {
+    flex-direction: column;
+  }
+}
+
+.social-links {
+  color: rgb(60, 7, 108);
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.social-icon {
+  text-decoration: none;
+  color: rgb(60, 7, 108);
+  background: var(--secondary-color);
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  background: var(--primary-color);
+  color: var(--background-color);
+}
+
+.social-icon.disabled {
+  background: #555;
+  color: #ccc;
+  cursor: not-allowed;
+}
