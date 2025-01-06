@@ -35,7 +35,7 @@ body {
   overflow-x: hidden;
 }
 a {
-  margin: 4px;
+  margin: 14px;
 }
 em {
   color: rgb(49, 22, 66);
@@ -89,21 +89,6 @@ h3 strong {
   padding: 25px;
 }
 
-.secondary-button {
-  background: var(--secondary-color);
-  color: var(--background-color);
-  padding: 10px 20px;
-  text-decoration: none;
-  font-size: 1.1rem;
-  border-radius: 5px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.secondary-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0px 6px 15px var(--hover-shadow);
-  background: var(--primary-color);
-}
 
 
 /* Hero Section */
@@ -442,3 +427,181 @@ footer {
   color: #ccc;
   cursor: not-allowed;
 }
+/* Responsive Design */
+
+/* Petits appareils (tablettes et mobiles) */
+@media (max-width: 768px) {
+  body {
+    font-size: 90%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 20px;
+    height: auto;
+  }
+
+  .hero-content {
+    margin: 20px 10px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+  }
+
+  .about-section {
+    flex-direction: column;
+    padding: 30px 5%;
+  }
+
+  .about-text, .about-video {
+    width: 100%;
+  }
+
+  .timeline {
+    flex-direction: column;
+  }
+
+  .timeline-item {
+    width: 100%;
+  }
+
+  .community-section {
+    padding: 40px 5%;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
+/* Très petits appareils (mobiles étroits) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .cta-button, .community-button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .hero {
+    padding: 10px;
+    height: auto;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .about-section {
+    padding: 20px 5%;
+  }
+
+  .about-video video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .roadmap-section {
+    padding: 20px 5%;
+  }
+
+  .timeline-item {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  footer {
+    padding: 10px;
+    font-size: 0.7rem;
+  }
+}
+
+/* Appareils moyens (petits ordinateurs portables) */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero {
+    padding: 30px;
+    height: auto;
+  }
+
+  .hero-content {
+    margin: 20px 30px;
+  }
+
+  .about-section {
+    padding: 40px 5%;
+  }
+
+  .timeline-item {
+    width: 100%;
+  }
+}
+
+/* Grands écrans (larges ordinateurs) */
+@media (min-width: 1440px) {
+  .hero {
+    padding: 50px 10%;
+  }
+
+  .about-section {
+    padding: 70px 15%;
+  }
+
+  .timeline-item {
+    width: 25%;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+}
+
