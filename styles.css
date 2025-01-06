@@ -143,6 +143,7 @@ h3 strong {
 
 /* About Section */
 .about-section {
+  margin-top: 35px;
   background: var(--background-color);
   color: var(--secondary-color);
   padding: 50px 10%;
